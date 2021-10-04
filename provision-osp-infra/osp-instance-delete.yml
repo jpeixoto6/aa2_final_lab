@@ -1,0 +1,26 @@
+---
+# tasks file for roles/osp-instance-delete
+- name: Delete OpenStack Instances
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    guid: "{{ lookup('ENV','GUID') }}"
+  tasks:
+    - name: Include Instance variables
+      include_vars: instances_vars.yml
+
+
+  tasks:
+  - name: Fetch Instance Info
+    os_server_info:
+      cloud: "{{ guid }}-project"
+      filters:
+        vm_state: active
+    register: result
+
+  - name: Debug
+    debug:
+      var: result
+
