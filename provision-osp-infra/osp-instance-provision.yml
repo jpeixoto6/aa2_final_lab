@@ -13,7 +13,7 @@
 
     - name: print value
       debug:
-         msg: "DNS Server to use: {{hostvars.localhost.ansible_default_ipv4.address}}"
+         msg: "DNS Server to use: {{ansible_eth0.ipv4.address}}"
 
 - name: Create OpenStack Instances
   hosts: localhost
