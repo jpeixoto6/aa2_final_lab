@@ -1,6 +1,6 @@
 ---
 - name: Gather DNS Server IP address
-  hosts: controls
+  hosts: localhost
 
   tasks:
     - name: Gather network facts
