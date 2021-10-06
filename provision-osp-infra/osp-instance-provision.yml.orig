@@ -1,6 +1,6 @@
 ---
 - name: Gather DNS Server IP address
-  hosts: control_node
+  hosts: control.example.com
 
   tasks:
     - name: Gather network facts
@@ -13,10 +13,10 @@
 
     - name: print value
       debug:
-         msg: "DNS Server to use: {{hostvars.control_node.ansible_default_ipv4.address}}"
+         msg: "DNS Server to use: {{hostvars['control.example.com'].ansible_default_ipv4.address}}"
 
 - name: Create OpenStack Instances
-  hosts: control_node
+  hosts: localhost
   connection: local
   gather_facts: false
   vars:
@@ -41,7 +41,7 @@
         userdata: |
            #!/bin/bash
            echo 'PEERDNS=no' |sudo  tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 >/dev/null
-           echo 'DNS1={{hostvars.control_node.ansible_default_ipv4.address}}' |sudo  tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 >/dev/null
+           echo 'DNS1={{hostvars["control.example.com"].ansible_default_ipv4.address}}' |sudo  tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 >/dev/null
            sudo systemctl restart NetworkManager
       loop: "{{ instances }}"
       loop_control:
