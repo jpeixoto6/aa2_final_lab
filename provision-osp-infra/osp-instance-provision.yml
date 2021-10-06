@@ -13,11 +13,7 @@
 
     - name: print value
       debug:
-         var: hostvars.localhost.ansible_default_ipv4.address
-
-    - name: print value
-      debug:
-         msg: "DNS Server to use: {{hostvars.localhost.ansible_default_ipv4.address}}"
+         msg: "DNS Server to use: {{hostvars['control.example.com'].ansible_default_ipv4.address}}"
 
 - name: Create OpenStack Instances
   hosts: localhost
@@ -45,7 +41,7 @@
         userdata: |
            #!/bin/bash
            echo 'PEERDNS=no' |sudo  tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 >/dev/null
-           echo 'DNS1={{ansible_eth0.ipv4.address}}' |sudo  tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 >/dev/null
+           echo 'DNS1={{hostvars["control.example.com"].ansible_default_ipv4.address}}' |sudo  tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 >/dev/null
            sudo systemctl restart NetworkManager
       loop: "{{ instances }}"
       loop_control:
