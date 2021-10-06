@@ -11,16 +11,6 @@
     - name: Include Instance variables
       include_vars: instances_vars.yml
 
-
-  tasks:
-  - name: Fetch Instance Info
-    os_server_info:
-      cloud: "{{ guid }}-project"
-      filters:
-        vm_state: active
-    register: result
-
-  - name: Debug
-    debug:
-      var: result
-
+    - name: calling block 
+      include_tasks: osp-instance-delete-loop.yml
+      loop: ['front*','app*']

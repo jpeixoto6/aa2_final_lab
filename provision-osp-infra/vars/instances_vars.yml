@@ -1,38 +1,37 @@
 ---
 instances:
   - name: app1
-    keypair: bb79-keypair
+    keypair: 2b0e-keypair
     image: rhel-8.3
     flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
-    security_group: bb79-HostSG
-    internal_network: bb79-dev-network
+    security_group: 2b0e-HostSG
+    internal_network: 2b0e-dev-network
     metadata:
       AnsibleGroup: app_servers
 
   - name: app2
-    keypair: bb79-keypair
+    keypair: 2b0e-keypair
     image: rhel-8.3
     flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
-    security_group: bb79-HostSG
-    internal_network: bb79-dev-network
+    security_group: 2b0e-HostSG
+    internal_network: 2b0e-dev-network
     metadata:
       AnsibleGroup: app_servers
 
   - name: appdb1
-    keypair: bb79-keypair
+    keypair: 2b0e-keypair
     image: rhel-8.3
     flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
-    security_group: bb79-HostSG
-    internal_network: bb79-dev-network
+    security_group: 2b0e-HostSG
+    internal_network: 2b0e-dev-network
     metadata:
       AnsibleGroup: database_servers
 
   - name: frontend1
-    keypair: bb79-keypair
+    keypair: 2b0e-keypair
     image: rhel-8.3
     flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
-    security_group: bb79-HostSG
-    internal_network: bb79-dev-network
+    security_group: 2b0e-HostSG
+    internal_network: 2b0e-dev-network
     metadata:
       AnsibleGroup: load_balancers
-
