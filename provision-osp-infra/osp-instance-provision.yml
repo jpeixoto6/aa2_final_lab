@@ -1,6 +1,6 @@
 ---
 - name: Gather DNS Server IP address
-  hosts: controls
+  hosts: control.example.com
 
   tasks:
     - name: Gather network facts
