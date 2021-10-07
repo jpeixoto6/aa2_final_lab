@@ -6,10 +6,8 @@
 
   vars:
     guid: "{{ lookup('ENV','GUID') }}"
-  tasks:
-    - name: Include Instance variables
-      include_vars: instances_vars.yml
 
+  tasks:
     - name: calling block 
       include_tasks: osp-instance-delete-loop.yml
       loop: ['front*','app*']
