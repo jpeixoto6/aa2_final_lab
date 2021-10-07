@@ -1,8 +1,7 @@
 ---
 # tasks file for roles/osp-instance-delete
 - name: Delete OpenStack Instances
-  hosts: localhost
-  connection: local
+  hosts: control_node
   gather_facts: false
 
   vars:
