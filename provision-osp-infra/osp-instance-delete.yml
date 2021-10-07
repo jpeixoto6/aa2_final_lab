@@ -11,3 +11,5 @@
     - name: calling block 
       include_tasks: osp-instance-delete-loop.yml
       loop: ['front*','app*']
+      loop_control:
+        loop_var: server_name
