@@ -9,7 +9,7 @@ instances:
     security_group: 2b0e-HostSG
     internal_network: 2b0e-dev-network
     metadata:
-      AnsibleGroup: app_servers 
+      AnsibleGroup: app_servers
       deployment_name: ansible-labs
 
   - name: app2
@@ -29,7 +29,7 @@ instances:
     security_group: 2b0e-HostSG
     internal_network: 2b0e-dev-network
     metadata:
-      AnsibleGroup: app_servers
+      AnsibleGroup: database_servers
       deployment_name: ansible-labs
 
   - name: frontend1
@@ -39,5 +39,5 @@ instances:
     security_group: 2b0e-HostSG
     internal_network: 2b0e-dev-network
     metadata:
-      AnsibleGroup: app_servers
+      AnsibleGroup: load_balancers
       deployment_name: ansible-labs

@@ -1,6 +1,6 @@
 ---
 - name: Check network connectivity to OpenStack Provisioned Instances
-  hosts: meta-deployment_name_ansible_labs
+  hosts: meta-deployment_name_ansible-labs
   gather_facts: false
   become: false
 

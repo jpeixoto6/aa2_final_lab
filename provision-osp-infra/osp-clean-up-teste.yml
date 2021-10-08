@@ -1,4 +1,5 @@
-- hosts: meta-deployment_name_ansible_labs
+- name: Clean-up OpenStack Provisioned Instances
+  hosts: meta-deployment_name_ansible-labs
   become: true
 
   roles:
