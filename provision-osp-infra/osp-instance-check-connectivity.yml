@@ -1,0 +1,17 @@
+---
+# tasks file for roles/osp-instance-check-connectivityy
+- name: Check network connectivity to OpenStack Provisioned Instances
+  hosts: OSP_provisioned_servers
+  delegate_to: control_node
+  gather_facts: false
+
+  vars:
+    guid: "{{ lookup('ENV','GUID') }}"
+
+  tasks:
+  - name: Ping provisioned server 
+    ping:
+
+
+
+
