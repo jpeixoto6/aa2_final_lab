@@ -9,7 +9,7 @@
 
   tasks:
   - name: Ping provisioned server 
-    delegate_to: control_node
+    delegate_to: control
     ping:
 
 
