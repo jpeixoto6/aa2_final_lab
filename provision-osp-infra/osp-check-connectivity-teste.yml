@@ -1,0 +1,12 @@
+---
+- name: Check network connectivity to OpenStack Provisioned Instances
+  hosts: meta-deployment_name_ansible_labs
+  gather_facts: false
+  become: false
+
+  roles:
+    - osp-instance-check-connectivity
+
+
+
+

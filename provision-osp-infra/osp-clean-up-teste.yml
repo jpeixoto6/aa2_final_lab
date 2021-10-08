@@ -1,0 +1,6 @@
+- hosts: meta-deployment_name_ansible_labs
+  become: true
+
+  roles:
+    - osp-instance-clean-up
+

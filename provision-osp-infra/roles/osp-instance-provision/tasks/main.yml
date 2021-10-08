@@ -1,0 +1,5 @@
+---
+# tasks file for osp-instance-provision
+
+- include_tasks: get-dns.yml
+- include_tasks: provision-server.yml

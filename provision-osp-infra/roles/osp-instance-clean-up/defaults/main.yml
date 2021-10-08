@@ -1,0 +1,3 @@
+---
+# defaults file for osp-instance-clean-up
+guid: "{{ lookup('ENV','GUID') }}"

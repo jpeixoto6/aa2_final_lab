@@ -1,0 +1,4 @@
+---
+# tasks file for osp-instance-check-connectivity
+- name: Ping provisioned server
+  ping:

@@ -1,0 +1,4 @@
+---
+# defaults file for osp-instance-check-connectivity
+
+guid: "{{ lookup('ENV','GUID') }}"

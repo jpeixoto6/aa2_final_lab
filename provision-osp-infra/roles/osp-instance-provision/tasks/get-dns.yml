@@ -1,0 +1,11 @@
+---
+# tasks file for osp-instance-provision
+- name: Gather network facts
+  setup:
+    gather_subset:
+      - 'network'
+
+- name: print value
+  debug:
+    msg: "DNS Server to use: {{hostvars.control.ansible_default_ipv4.address}}"
+
