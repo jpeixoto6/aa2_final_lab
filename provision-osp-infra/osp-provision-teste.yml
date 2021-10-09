@@ -1,6 +1,0 @@
----
-- hosts: control
-  become: true
-
-  roles:
-    - osp-instance-provision
