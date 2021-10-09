@@ -1,0 +1,7 @@
+#App Tier - firewalld rule opening 443
+- name: Open tcp port
+  firewalld:
+    port: "443/tcp"
+    permanent: yes
+    immediate: yes
+    state: enabled

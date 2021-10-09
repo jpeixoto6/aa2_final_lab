@@ -1,0 +1,17 @@
+#Firewall install
+
+- name: Install Firewalld
+  yum:
+    name: firewalld
+    state: latest
+
+- name: Start firewalld
+  service:
+    name: firewalld
+    enabled: yes
+    state: started
+
+- name: print
+  debug:
+    msg: "{{ groups }}"
+

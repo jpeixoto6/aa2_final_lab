@@ -1,0 +1,7 @@
+#Postgres - firewalld rule opening 5432
+- name: Open tcp port
+  firewalld:
+    port: "5432/tcp"
+    permanent: yes
+    immediate: yes
+    state: enabled

@@ -1,0 +1,8 @@
+#Firewall Setup
+- name: Firewall setup
+  hosts: meta-deployment_name_ansible-labs
+  become: true
+
+  roles:
+    - server-firewall-setup
+

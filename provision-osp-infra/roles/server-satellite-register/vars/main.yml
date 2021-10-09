@@ -1,0 +1,5 @@
+---
+# vars file for osp-register-satellite
+satellite_activationkey: gpte-labs-rhel8
+satellite_org: prod
+

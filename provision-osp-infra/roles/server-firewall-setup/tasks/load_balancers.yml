@@ -1,0 +1,8 @@
+- name: Open service port
+  firewalld:
+    service: http
+    state: enabled
+    immediate: true
+    permanent: true
+
+

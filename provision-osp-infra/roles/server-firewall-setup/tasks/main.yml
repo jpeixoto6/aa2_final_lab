@@ -1,0 +1,17 @@
+---
+# tasks file for server-firewall-setup
+
+- include_tasks: common.yml
+
+#Firewall rule setup for app_tier servers 
+- include_tasks: app_tier.yml
+  when: "'meta-AnsibleGroup_app_servers' is in group_names"
+
+# Firewall rules setup for app database servers
+- include_tasks: appdb.yml
+  when: "'meta-AnsibleGroup_database_servers' is in group_names" 
+
+# Firewall rules setup for load balancers
+ 
+- include_tasks: load_balancers.yml
+  when: "'meta-AnsibleGroup_load_balancers' is in group_names"

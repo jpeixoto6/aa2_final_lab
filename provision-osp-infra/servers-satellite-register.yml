@@ -1,0 +1,8 @@
+#Register servers to satellite
+- name: Register OpenStack Provisioned Instances
+  hosts: meta-deployment_name_ansible-labs
+  become: true
+
+  roles:
+    - server-satellite-register
+
