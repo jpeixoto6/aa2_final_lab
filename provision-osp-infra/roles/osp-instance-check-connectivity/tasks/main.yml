@@ -1,5 +1,13 @@
 ---
 # tasks file for osp-instance-check-connectivity
+
+- name: Sleep for 60  seconds and continue with play - time to have all servers active
+  wait_for:
+    timeout: 60
+
+- name: Refresh inventory to ensure new instances exist in inventory
+  meta: refresh_inventory
+
 - name: Wait for system to become reachable
   wait_for_connection:
     timeout: 300
