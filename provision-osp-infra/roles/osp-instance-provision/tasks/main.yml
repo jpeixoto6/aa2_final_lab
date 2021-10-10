@@ -4,6 +4,6 @@
 - include_tasks: get-dns.yml
 
 - include_tasks: provision-server.yml
-#  loop: "{{ instances }}"
-#  loop_control:
-#    loop_var: instance
+  loop: "{{ instances }}"
+  loop_control:
+    loop_var: instance

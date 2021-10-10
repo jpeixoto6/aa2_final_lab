@@ -1,11 +1,13 @@
 ---
 # tasks file for osp-instance-check-connectivity
 
-- name: Refresh inventory to ensure new instances exist in inventory
-  meta: refresh_inventory
+#- name: Refresh inventory to ensure new instances exist in inventory
+#  meta: refresh_inventory
 
-- name: Wait for system to become reachable
-  wait_for_connection:
-    delay: 60
-    timeout: 180
+#- name: Wait for system to become reachable
+#  wait_for_connection:
+#    delay: 60
+#    timeout: 180
 
+- name: Check connevtivity to provisoned servers
+  ping:
