@@ -11,7 +11,3 @@
     enabled: yes
     state: started
 
-- name: print
-  debug:
-    msg: "{{ groups }}"
-

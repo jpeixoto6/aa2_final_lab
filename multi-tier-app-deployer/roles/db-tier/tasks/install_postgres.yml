@@ -1,0 +1,28 @@
+---
+# Install Postgres packages
+
+- name: Disable any postgres module repos
+  command: dnf -qy module disable postgresql
+
+- name: Install Postgres packages
+  dnf:
+    name: "{{ __package }}"
+    state: present
+    enablerepo:
+      - pgdg12
+    disable_gpg_check: true
+  loop:
+    - "{{ postgres_rhel8_repo }}"
+    - "{{ postgres_packages }}"
+  loop_control:
+    loop_var: __package
+
+- name: Check if Postgres initialized
+  stat:
+    path: "{{ postgres_12_data_dir }}/PG_VERSION"
+  register: r_postgres_init_dir_state
+
+- when: not r_postgres_init_dir_state.stat.exists
+  name: Run Postgres initdb to initialize if postgres not initialized
+  command: "{{ postgres_12_bin_path }}/postgresql-12-setup initdb"
+  notify: restart_postgres

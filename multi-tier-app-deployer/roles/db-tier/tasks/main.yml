@@ -1,0 +1,7 @@
+---
+
+  - include: tasks/install_postgres.yml
+
+  - include: tasks/setup_postgres.yml
+
+  - include: tasks/configure_postgres.yml

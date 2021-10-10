@@ -1,0 +1,9 @@
+---
+#Deploy, configure, and populate flask repo and virtualenv
+    
+- include: flask_install.yml
+
+- include: virtualenv_setup.yml
+          
+- include: initialize_start_app_service.yml
+
