@@ -19,10 +19,6 @@
       tags:
         - smoketest
 
-    - name: print end
-      debug:
-        msg: "{{ hostvars.frontend1 }}"
-
 - name: End to end smoke tests
   hosts: app_servers
   become: false
