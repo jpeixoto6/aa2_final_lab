@@ -21,3 +21,8 @@
   loop: "{{ instances }}"
   loop_control:
     loop_var: instance
+ 
+- name: Sleep for 60  seconds and continue with play - time to have all servers active
+  wait_for:
+    timeout: 60
+  delegate_to: localhost
