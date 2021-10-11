@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-timezone="Etc/UTC" class='no-js'>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-6eecea30cdce7df6c805306a748792a0584f62c716c70af80591017c3c0c3c8d.ico" />
+
+    <link rel="stylesheet" media="screen" href="/webpack/foreman-vendor.bundle-v4.3.0-production-7c19ff9bfddfa7208370.css" />
+    <link rel="stylesheet" media="screen" href="/webpack/bundle-f94f43de46cc1182db80.css" />
+    <link rel="stylesheet" media="screen" href="/assets/application-2cf9efeff61e00b5e0908a00dbeb1850261be63e54e9d838d63e1a2305440545.css" />
+    
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="11NhIg1U2s7MMGImwJN+tzU7EkDsZTjKyYSukcNHt1mO4YNlTqdZY2SCMwVkT6ka1vVsvsQCHfLtargcz/deTA==" />
+
+    <script type="text/javascript">
+      var URL_PREFIX = '';
+
+        var AUTH_TOKEN = 'zKytrJytIH6BXOymQJzLagTQVGB61Fti+rriFIMLJ4+VHk/r316j0ynuvYXkQBzH5x4qnlKzflreVPSZj7vOmg==';
+
+    </script>
+    <script src="/assets/locale/en/app-4e04957108ba07b47434195b0668d057f313ea6933f95450c203bf19e6b544c4.js"></script>
+    <script src="/webpack/foreman-vendor.bundle-v4.3.0-production-7c19ff9bfddfa7208370.js"></script>
+    <script src="/webpack/vendor-4cdb65003268ea912b6f.js"></script>
+    <script src="/webpack/bundle-f94f43de46cc1182db80.js"></script>
+    <script src="/assets/application-df5a83b6003fb53b4e73c023e9ccea6fbf9f3b3cc84bb95b4cb4e40f3b18204e.js"></script>
+    <script src="/webpack/foreman_rh_cloud/foreman_rh_cloud:subscriptions_extension-efc51cfa483ebeedc5e4.js" defer="defer"></script><script src="/webpack/katello/katello:fills-9cc596c881e3e6eef6a4.js" defer="defer"></script>
+    
+    
+
+    <script type="text/javascript">
+      
+    </script>
+
+    
+  
+<link rel="stylesheet" media="screen" href="/assets/theme-11485ef610fa29479e0ae3f78854d7d4d42d34916896f16db30cd2954a1fb622.css" />
+<script src="/assets/theme_dashboard-5d614f487fe1cfcfa5de6efd2e2d904d87299d48016b84a1e6829bd06524d755.js"></script>
+<script>
+//<![CDATA[
+
+  
+var branded_words = []
+branded_words.push([new RegExp("%{proxy}", "g"), "%{proxy}"]);
+branded_words.push([new RegExp("%{foreman}", "g"), "%{foreman}"]);
+branded_words.push([new RegExp("\\b[Hh][Tt][Tt][Pp] [Pp]roxy\\b(?!-)", "g"), "HTTP Proxy"]);
+branded_words.push([new RegExp("\\b[Hh][Tt][Tt][Pp] [Pp]roxies\\b(?!-)", "g"), "HTTP Proxies"]);
+branded_words.push([new RegExp("\\bHTTP\\(S\\) proxy\\b(?!-)", "g"), "HTTP(S) proxy"]);
+branded_words.push([new RegExp("\\bIgnore Proxy\\b(?!-)", "g"), "Ignore Proxy"]);
+branded_words.push([new RegExp("\\bIgnore proxy\\b(?!-)", "g"), "Ignore Proxy"]);
+branded_words.push([new RegExp("\\bLeave this blank if no proxy is used\\b(?!-)", "g"), "Leave this blank if no proxy is used"]);
+branded_words.push([new RegExp("\\bbypass proxy settings\\b(?!-)", "g"), "bypass proxy settings"]);
+branded_words.push([new RegExp("\\bURL of the proxy\\b(?!-)", "g"), "URL of the proxy"]);
+branded_words.push([new RegExp("\\bhttps://proxy.example.com:8080\\b(?!-)", "g"), "https://proxy.example.com:8080"]);
+branded_words.push([new RegExp("\\bproxy for all outgoing HTTP connections\\b(?!-)", "g"), "proxy for all outgoing HTTP connections"]);
+branded_words.push([new RegExp("\\bperform various actions through those proxies\\b(?!-)", "g"), "perform various actions through those proxies"]);
+branded_words.push([new RegExp("\\bForeman\\b(?!-)", "g"), "Satellite"]);
+branded_words.push([new RegExp("\\bforeman\\b(?!-)", "g"), "satellite"]);
+branded_words.push([new RegExp("\\bsmart-proxy\\b(?!-)", "g"), "capsule"]);
+branded_words.push([new RegExp("\\bSmart-proxy\\b(?!-)", "g"), "Capsule"]);
+branded_words.push([new RegExp("\\bsmart proxies\\b(?!-)", "g"), "capsules"]);
+branded_words.push([new RegExp("\\bSmart proxies\\b(?!-)", "g"), "Capsules"]);
+branded_words.push([new RegExp("\\bsmart-proxies\\b(?!-)", "g"), "capsules"]);
+branded_words.push([new RegExp("\\bSmart-proxies\\b(?!-)", "g"), "Capsules"]);
+branded_words.push([new RegExp("\\bSmart Proxies\\b(?!-)", "g"), "Capsules"]);
+branded_words.push([new RegExp("\\bSmart Proxy\\(ies\\)(?!-)", "g"), "Capsule(s)"]);
+branded_words.push([new RegExp("\\bSmart Proxy\\b(?!-)", "g"), "Capsule"]);
+branded_words.push([new RegExp("\\bsmart proxy\\b(?!-)", "g"), "capsule"]);
+branded_words.push([new RegExp("\\bSmart-Proxies\\b(?!-)", "g"), "Capsules"]);
+branded_words.push([new RegExp("\\bSmart proxy\\b(?!-)", "g"), "Capsule"]);
+branded_words.push([new RegExp("\\bSmart-Proxy\\b(?!-)", "g"), "Capsule"]);
+branded_words.push([new RegExp("\\boVirt\\b(?!-)", "g"), "RHEV"]);
+branded_words.push([new RegExp("\\bovirt\\b(?!-)", "g"), "RHEV"]);
+branded_words.push([new RegExp("\\bOvirt\\b(?!-)", "g"), "RHEV"]);
+branded_words.push([new RegExp("\\bFreeIPA\\b(?!-)", "g"), "Red Hat Identity Management"]);
+branded_words.push([new RegExp("\\bOpenStack\\b(?!-)", "g"), "RHEL OpenStack Platform"]);
+branded_words.push([new RegExp("\\bopenstack\\b(?!-)", "g"), "RHEL OpenStack Platform"]);
+branded_words.push([new RegExp("\\bOpenstack\\b(?!-)", "g"), "RHEL OpenStack Platform"]);
+branded_words.push([new RegExp("\\bProxy\\b(?!-)", "g"), "Capsule"]);
+branded_words.push([new RegExp("\\bproxy\\b(?!-)", "g"), "Capsule"]);
+branded_words.push([new RegExp("\\bProxies\\b(?!-)", "g"), "Capsules"]);
+branded_words.push([new RegExp("\\bproxies\\b(?!-)", "g"), "Capsules"]);
+branded_words.push([new RegExp("\\bKatello 4.0\\b(?!-)", "g"), "Satellite 7.0"]);
+branded_words.push([new RegExp("https://theforeman.org/plugins/katello/(?!-)", "g"), "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.8/html/managing_hosts/registering_hosts#registering-a-host-to-satellite-using-the-bootstrap-script"]);
+
+function brand_string(string){
+  result = string;
+  branded_words.some(function(tuple){
+    var regex = tuple[0];
+    var value = tuple[1];
+
+    parts = string.split(regex)
+    if (parts.length > 1) {
+      parts = parts.map(function(part) {
+        return brand_string(part)
+      })
+      result = parts.join(value)
+    }
+    return parts.length > 1;
+  });
+  return result;
+}
+
+tfm.i18n.jed.original_dcnp = tfm.i18n.jed.dcnpgettext
+
+tfm.i18n.jed.dcnpgettext = function( domain, context, singular_key, plural_key, val ) {
+  translated = tfm.i18n.jed.original_dcnp( domain, context, singular_key, plural_key, val );
+
+  return brand_string(translated);
+}
+
+if (typeof(angular) !== 'undefined') {
+  angular.module('Bastion.i18n').config([ '$provide', function($provide) {
+    $provide.decorator('translate', [
+      '$delegate',
+      function ($delegate) {
+        var originalTranslate = $delegate;
+        return function(str) {
+          originalStr = originalTranslate(str);
+          return brand_string(originalStr);
+        }
+      }
+    ]);
+  }]);
+}
+
+if (typeof(angular) !== 'undefined') {
+  angular.module('gettext').config([ '$provide', function($provide) {
+    $provide.decorator('gettextCatalog', [
+      '$delegate',
+      function ($delegate) {
+        var originalTranslate = $delegate.getString;
+        $delegate.getString = function(str) {
+          originalStr = originalTranslate.apply($delegate, [str]);
+          return brand_string(originalStr);
+        }
+        return $delegate;
+      }
+    ]);
+  }]);
+}
+
+if (typeof(angular) !== 'undefined') {
+  var templateUrl = 'register-client-downstream.html'
+
+  angular.module('Bastion.content-hosts').directive('registerClient', function () {
+    return {
+      restrict: 'E',
+      templateUrl: templateUrl
+    };
+  });
+
+  angular.module('Bastion.content-hosts').decorator("registerClientDirective", function ($delegate) {
+    return [$delegate.find(function (item) {
+       return item.templateUrl === templateUrl
+    })];
+  });
+}
+
+
+//]]>
+</script></head>
+
+  <body>
+    <!--[if lte IE 9]>
+      You are using an unsupported browser.
+    <![endif]-->
+      
+  <div id="toast-notifications-container" data-notifications="[]"><script defer="defer">
+//<![CDATA[
+$(tfm.reactMounter.mount('ToastNotifications', '#toast-notifications-container', [], false));
+//]]>
+</script></div>
+  <div id='login-page'></div>
+<script defer="defer">
+//<![CDATA[
+$(tfm.reactMounter.mount('LoginPage', '#login-page', {"token":"rjA3LPjwXe45nv0APcFd4L4QnR2fZ3pUvbptKwnY7nv3gtVruwPeQ5EsrCOZHYpNXd7j47cAX2yZVHumBWgHbg==","version":"6.8.2","caption":null,"alerts":{},"logoSrc":"/assets/login_logo-5660a7c45794fe3276912dbbc966cc921c3e128640d546d0187d6b6e73e9bcc4.svg"}, true));
+//]]>
+</script>
+
+
+
+  </body>
+</html>
+

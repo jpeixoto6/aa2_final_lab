@@ -15,7 +15,8 @@
 - name: Pause play until a URL is reachable from this host
   uri:
     url: "http://satellite.example.com"
-    follow_redirects: none
+#    follow_redirects: none
+    validate_certs: no
     method: GET
   register: _result
   until: _result.status == 200
