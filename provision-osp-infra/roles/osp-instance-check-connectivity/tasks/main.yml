@@ -11,3 +11,13 @@
 
 - name: Check connevtivity to provisoned servers
   ping:
+
+- name: Pause play until a URL is reachable from this host
+  uri:
+    url: "http://satellite.example.com"
+    follow_redirects: none
+    method: GET
+  register: _result
+  until: _result.status == 200
+  retries: 720 
+  delay: 5 
