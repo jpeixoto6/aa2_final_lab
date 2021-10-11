@@ -1,0 +1,22 @@
+---
+# tasks file for db-tier-teardown
+
+- name: Remove Postgres packages
+  package:
+    name: "{{ __package }}"
+    state: absent
+  loop:
+    - "{{ postgres_packages }}"
+  loop_control:
+    loop_var: __package
+
+- name: Remove Postgres 12 data directory
+  file:
+    path: /var/lib/pgsql/12
+    state: absent
+
+- name: Remove Postgres user
+  user:
+    name: postgres
+    state: absent
+

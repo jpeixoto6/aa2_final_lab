@@ -1,0 +1,11 @@
+---
+#Postgres install, setup and configure
+
+- name: Teardown Postgres 12
+  hosts: database_servers, meta-AnsibleGroup_database_servers
+  become: true
+  gather_facts: false
+
+  roles:
+    - db-tier-teardown
+

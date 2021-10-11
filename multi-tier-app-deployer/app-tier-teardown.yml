@@ -1,0 +1,10 @@
+- name: Teardown app_servers flask configuration
+  hosts: app_servers
+  become: true
+  gather_facts: false
+  tags:
+    - application_servers
+
+  roles:
+    - app-tier-teardown
+    
