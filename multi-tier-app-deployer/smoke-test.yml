@@ -10,8 +10,8 @@
     - name: Create nested groups
       group_by:
         key: meta-AnsibleGroup_app_servers
-      parents:
-        - app_servers
+        parents:
+          - app_servers
 
     - name: print vars
       debug:
