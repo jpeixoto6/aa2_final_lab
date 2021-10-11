@@ -9,12 +9,12 @@
 
     - name: print vars
       debug:
-        msg: "{{ groups.meta-AnsibleGroup_database_servers }}"
+        msg: "{{ groups.'meta-AnsibleGroup_database_servers' }}"
 
 
     - name: print vars
       debug:
-        msg: "{{ groups.meta-AnsibleGroup_app_servers }}"
+        msg: "{{ groups.'meta-AnsibleGroup_app_servers' }}"
 
     - name: Smoketest Postgres database
       postgresql_ping:
