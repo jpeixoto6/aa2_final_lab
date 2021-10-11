@@ -19,6 +19,10 @@
       tags:
         - smoketest
 
+- name: print vars
+  debug:
+    msg: "{{ hostvars }}"
+
 - name: End to end smoke tests
   hosts: meta-AnsibleGroup_app_servers
   become: false
