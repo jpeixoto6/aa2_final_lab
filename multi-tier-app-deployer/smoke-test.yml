@@ -9,7 +9,7 @@
 
     - name: print vars
       debug:
-        msg: "{{ groups }}"
+        msg: "{{ groups.'meta-AnsibleGroup_app_servers' }}"
 
 
     - name: Smoketest Postgres database
