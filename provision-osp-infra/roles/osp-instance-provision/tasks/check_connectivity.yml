@@ -11,7 +11,7 @@
 
 - name: Wait for instance to be available
   wait_for:
-    host: "{{ result.openstack_servers[0].private_v4" }}"
+    host: "{{ result.openstack_servers[0].private_v4 }}"
     port: 22
     search_regex: OpenSSH
     timeout: 120
