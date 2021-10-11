@@ -8,7 +8,7 @@
     flavor: "{{ instance.flavor }}"
     security_groups: "{{ instance.security_group }}"
     delete_fip: yes
-    wait: no
+    wait: yes
     nics:
       - net-name: "{{ instance.internal_network }}"
     meta: "{{ instance.metadata }}"
