@@ -2,7 +2,7 @@
 #Postgres install, setup and configure
 
 - name: Deploy, configure, and populate Postgres 12
-  hosts: database_servers
+  hosts: database_servers, meta-AnsibleGroup_database_servers
   become: true
   gather_facts: false
   tags:
