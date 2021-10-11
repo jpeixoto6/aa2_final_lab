@@ -7,6 +7,15 @@
 
   tasks:
 
+    - name: print vars
+      debug:
+        msg: "{{ groups.meta-AnsibleGroup_database_servers }}"
+
+
+    - name: print vars
+      debug:
+        msg: "{{ groups.meta-AnsibleGroup_app_servers }}"
+
     - name: Smoketest Postgres database
       postgresql_ping:
         db: flask_db
