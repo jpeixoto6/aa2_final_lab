@@ -7,25 +7,14 @@
 
   tasks:
 
-    - name: Create nested groups
-      group_by:
-        key: meta-AnsibleGroup_app_servers
-        parents:
-          - app_servers
-
-    - name: print vars
-      debug:
-        msg: "{{ groups.app_servers }}"
-
-
     - name: Smoketest Postgres database
       postgresql_ping:
         db: flask_db
-        login_host: "{{ groups.meta-AnsibleGroup_database_servers[0] }}"
+        login_host: "{{ hostvars.appdb1.ansible_host }}"
         login_user: flask
         login_password: redhat
         ssl_mode: disable
-      delegate_to: "{{ groups.meta-AnsibleGroup_app_servers[0] }}"
+      delegate_to: "{{ hostvars.app1.ansible_host }}"
       run_once: true
       tags:
         - smoketest
