@@ -4,6 +4,8 @@
 - include_tasks: get-dns.yml
 
 - include_tasks: provision-server.yml
+
+- include_tasks: check_connectivity.yml
   loop: "{{ instances }}"
   loop_control:
     loop_var: instance
