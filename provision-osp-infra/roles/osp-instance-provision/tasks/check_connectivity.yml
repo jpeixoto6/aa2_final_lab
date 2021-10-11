@@ -6,7 +6,7 @@
 
 - name: print data
   debug:
-    msg: "{[ result.openstack_servers }}"
+    msg: "{{ result.openstack_servers }}"
 
 
 - name: Wait for instance to be available
