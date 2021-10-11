@@ -19,9 +19,6 @@
       tags:
         - smoketest
 
-- name: print vars
-  debug:
-    msg: "{{ hostvars }}"
 
 - name: End to end smoke tests
   hosts: meta-AnsibleGroup_app_servers
@@ -31,6 +28,10 @@
     - smoketest  
   tasks:
  
+    - name: print vars
+      debug:
+        msg: "{{ hostvars }}"
+
     - name: Check webserver for correct response
       uri:
         url: "http://{{hostvars.frontend1.ansible_host}}/ping"
